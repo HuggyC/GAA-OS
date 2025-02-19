@@ -1,26 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { OperatingSystem, useOS } from '@prozilla-os/core';
-import { defaultSkin } from '@prozilla-os/skins';
-import { academyApps } from './config/apps';
+import { Desktop } from '@prozilla-os/core';
 
-// Styles
-import '@prozilla-os/core/styles.css';
-import './styles/index.css';
+import '@prozilla-os/core/dist/style.css';
+import '@prozilla-os/skins/dist/style.css';
 
-// Import des applications GAA
-import { academyConfig } from './config';
-
-const root = document.getElementById('root');
-
-if (root) {
-  ReactDOM.createRoot(root).render(
-    <React.StrictMode>
-      <OperatingSystem
-        config={academyConfig}
-        apps={academyApps}
-        defaultSkin={defaultSkin}
-      />
-    </React.StrictMode>
-  );
-}
+ReactDOM.createRoot(document.getElementById('root')!).render(
+  <React.StrictMode>
+    <Desktop />
+  </React.StrictMode>
+);
