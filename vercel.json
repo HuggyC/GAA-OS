@@ -1,10 +1,12 @@
 {
   "version": 2,
-  "buildCommand": "pnpm run packages:build && pnpm run demo:build",
+  "buildCommand": "cd demo && pnpm build",
   "outputDirectory": "demo/dist",
-  "installCommand": "pnpm install",
+  "installCommand": "pnpm install --frozen-lockfile",
   "framework": "vite",
   "env": {
-    "NODE_VERSION": "18"
+    "NODE_VERSION": "18",
+    "PNPM_VERSION": "9.15.0",
+    "SKIP_PREFLIGHT_CHECK": "true"
   }
 }
