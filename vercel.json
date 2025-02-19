@@ -3,5 +3,8 @@
   "buildCommand": "pnpm run packages:build && pnpm run demo:build",
   "outputDirectory": "demo/dist",
   "installCommand": "pnpm install",
-  "framework": "vite"
+  "framework": "vite",
+  "env": {
+    "NODE_VERSION": "18"
+  }
 }
